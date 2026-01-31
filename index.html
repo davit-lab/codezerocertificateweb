@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ვებ-დეველოპმენტის აკადემიური სერტიფიკატი</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Fira+GO:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,700;0,800;1,600;1,700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-dark: #1a1523;
+            --brand-primary: #5E17EB;
+            --brand-accent: #c5a059;
+            --bg-paper: #fdfcf8;
+        }
+        body {
+            font-family: 'Fira GO', sans-serif;
+            background-color: var(--bg-paper);
+            color: var(--brand-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .academic-border {
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            position: relative;
+        }
+        .academic-border::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            pointer-events: none;
+        }
+        .grainy-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 3s infinite ease-in-out;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "gun": "https://esm.sh/gun@0.2020.1239?bundle"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="grainy-bg"></div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
